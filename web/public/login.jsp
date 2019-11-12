@@ -1,6 +1,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
+
 <html>
 
     <head>
@@ -14,7 +15,25 @@
 
         <form id="loginform" name="loginform" method="POST" action="j_security_check" accept-charset="UTF-8">
 
-            <!-- Insert your form elements here -->
+            <fieldset>
+                
+                <legend>Login Setup</legend>
+                
+                <p>
+                    <label for="j_username">Username:</label>
+                    <input type="text" name="j_username" id="j_username">
+                </p>
+                
+                <p>
+                    <label for="j_password">Password:</label>
+                    <input type="password" name="j_password" id="j_password">
+                </p>
+                
+                <p>
+                    <input type="Submit" value="Submit">
+                </p>
+                
+            </fieldset>
 
         </form>
 
@@ -25,11 +44,11 @@
         </ul>
 
         <%
-
+            
             String result = request.getParameter("error");
-
+            
             if (result != null) {
-
+                
         %>
 
         <div id="loginerror" style="color: red;">
@@ -43,13 +62,13 @@
         </div>
 
         <%
-
+            
             }
 
         %>
         
         <script type="text/javascript">
-
+            
         </script>
 
     </body>
