@@ -8,6 +8,12 @@ public class BeanApplicant {
     private String displayname;
     private int id;
     
+    
+    public String getSkillsList() {
+        Database db = new Database();
+        return ( db.getSkillsListAsHTML(id) );
+    }
+    
     public void setUserInfo() {
         
         Database db = new Database();

@@ -58,6 +58,7 @@ public class Database {
                     
                     String id = resultset.getString("id");
                     String displayname = resultset.getString("displayname");
+                    
                     results = new HashMap();
                     results.put("id", id);
                     results.put("displayname", displayname);
