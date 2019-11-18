@@ -8,6 +8,8 @@ public class BeanApplicant {
     private String displayname;
     private int id;
     
+    private String[] skills;
+    
     
     public String getSkillsList() {
         Database db = new Database();
@@ -46,5 +48,20 @@ public class BeanApplicant {
     public void setUsername(String username) {
         this.username = username;
     }
+    
+    public String[] getSkills(){
+        return skills;
+    }
+    
+    public void setSkillsList() {
+        Database db = new Database();
+        
+        db.setSkillsList(id, skills);
+     }
+    
+    public String getJobsList() {
+         Database db = new Database();
+         return ( db.getJobsListAsHTML(id) );
+      }
     
 }
